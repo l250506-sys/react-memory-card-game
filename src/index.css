@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  overflow-x: hidden;
+  position: relative;
+}
+header{
+  background: linear-gradient(45deg,blue,rgb(118, 174, 248));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+header h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4em;
+  gap: 10px;
+  color: rgb(219, 216, 216);
+  font-family: "Roboto";
+}
+header h1 .brain{
+  color: rgb(241, 73, 73);
+}
+header::after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(169, 169, 169);
+  bottom: 0;
+  left: 0;
+}
+main {
+  display: flex;
+  align-items: center;
+  padding: 20px 20px 10px 20px;
+  background-color: rgb(28, 28, 28);
+  flex-direction: column;
+  position: relative;
+}
+main h2{
+  font-family: "Montserrat";
+  font-size: 1.3em;
+  color: rgb(0, 94, 255);
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+main ul{
+  display: grid;
+  gap:10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+main ul li{
+  list-style: none;
+  background-color: rgb(156, 151, 151);
+  width: 120px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  font-size: 2em;
+  cursor: pointer;
+}
+main ul li:disabled{
+  cursor: none;
+}
+main ul li.lightLi{
+  background-color: rgb(229, 136, 136);
+}
+.hide{
+  color: transparent;
+}
+.show{
+  color:black !important;
+}
+.disabled{
+  background-color: rgb(83, 83, 83);
+}
+.disabled.lightLi{
+  background-color: white;
+}
+.info{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.info.light h2{
+  color: rgb(134, 112, 112);
+}
+.info.light p{
+  color: white;
+}
+.info h2{
+  color: blueviolet;
+}
+.info p{
+  color: aqua;
+  font-family: "Inter";
+}
+.new-game{
+  font-family: "Inter";
+  background-color: rgb(108, 223, 108);
+  padding: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1.1em;
+  border: none;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.new-game:hover{
+  background-color: rgb(0, 206, 0);
+  font-weight: 600;
+  transform: translate(0,-10px);
+}
+.dark-light{
+  position: absolute;
+  right: 5px;
+  top:0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.dark-light button{
+  padding: 5px;
+  font-family: "Roboto";
+  font-size: 0.8em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.dark{
+  background-color: black;
+  color: white;
+}
+.dark-light button:hover{
+  transform: scale(1.1);
+}
+.dark-light button:active{
+  transform: scale(0.9);
+}
+.white{
+  background-color: rgb(225, 173, 173);
+}
